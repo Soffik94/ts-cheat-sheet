@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    // Nastavení TypeScript kompilátoru
+    "target": "ES6", // Nastavuje cílovou verzi JavaScriptu na ES6 (ECMAScript 2015)
+    "module": "commonjs", // Nastavuje formát modulů na "commonjs", což je běžný modulový systém v Node.js
+    "outDir": "./dist", // Určuje výstupní složku, kam se uloží zkompilované soubory (zde složka "dist")
+    "rootDir": "./src", // Určuje cestu ke zdroji pro kompilaci
+    "lib": ["dom", "es6", "dom.iterable", "scripthost"], // Základní knihovny
+    "strict": true, // Zapne přísný režim TypeScriptu, který kontroluje všechny chyby typů a zvyšuje bezpečnost kódu
+    "noUnusedLocals": true, // Upozorní na nepoužité lokální proměnné jako na chybu
+    "noUnusedParameters": false, // Upozorní na nepoužité parametry
+    "noImplicitReturns": false // hlídá existenic return u funkcí
+    // ,"sourceMap": true // Přes inspect v prohlížeči uvidím i ts soubory
+    // ,"removeComments": true // Odstraní komenty z js. souborů
+    // ,"noEmitOnError": true // Pokud je v .ts chyba, .js se neaktualizuje
+  },
+  "include": ["./**/*.ts"], // Zahrne všechny .ts soubory v projektu včetně podsložek (rekurzivně)
+  "exclude": ["node_modules"] // Vyloučí složku "node_modules" z kompilace
+}
