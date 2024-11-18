@@ -97,3 +97,9 @@ const generateError = (errorText: string, errorNumber: number): never => {
 };
 
 generateError("chyba", 404);
+
+//interface
+interface Client {
+  name: string;
+  address: string;
+}
