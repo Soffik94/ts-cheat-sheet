@@ -143,11 +143,14 @@ class DatabaseConnection {
   }
 }
 
-//Interface
+//Interface - public a private není možné použít, jde pouze readonly
 
-interface IGreet {
-  name: string;
+interface Name {
+  readonly name: string;
+  age?: number; // volitelný parametr, může, ale nemusí být
+}
 
+interface IGreet extends Name {
   greet(phrase: string): void;
 }
 
@@ -160,3 +163,15 @@ class Person implements IGreet {
 
 const User1 = new Person("Matěj");
 User1.greet("Ahoj");
+
+//Interface jako funkce
+
+interface AddFunction {
+  (a: number, b: number): number;
+}
+
+let suma: AddFunction;
+
+suma = (number1: number, number2: number) => {
+  return number1 + number2;
+};
